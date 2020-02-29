@@ -1,6 +1,6 @@
 package io.zipcoder.pets;
 
-abstract public class Pets {
+abstract public class Pets implements petActions{
     String name;
 
     public Pets(String name) {

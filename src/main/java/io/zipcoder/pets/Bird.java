@@ -1,6 +1,6 @@
 package io.zipcoder.pets;
 
-public class Bird extends Pets implements petActions{
+public class Bird extends Pets{
 
     public Bird(String name) {
         super(name);
