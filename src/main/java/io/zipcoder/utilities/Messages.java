@@ -20,7 +20,7 @@ public class Messages {
     public Integer promptForTypeOfPet() {
         selectFromMenu();
         Integer result = console.getIntegerInput("1 = Dog\n2 = Cat\n3 = Bird");
-        if(result != 1 || result != 2 || result != 3){
+        if(result > 3 || result == 0){
             invalidMenuSelectionPrompt();
             promptForTypeOfPet();
         }

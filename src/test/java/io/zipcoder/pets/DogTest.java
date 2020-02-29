@@ -8,7 +8,7 @@ public class DogTest {
     @Test
     public void setDogNameTest(){
         //Given
-        Dog dog = new Dog();
+        Dog dog = new Dog("Ripley");
         String expected = "Ripley";
 
         //When
@@ -22,7 +22,7 @@ public class DogTest {
     @Test
     public void getDogNameTest(){
         //Given
-        Dog dog = new Dog();
+        Dog dog = new Dog("Ripley");
         String expected = "Ripley";
 
         //When
@@ -35,7 +35,7 @@ public class DogTest {
     @Test
     public void dogSpeakTest(){
         //Given
-        Dog dog = new Dog();
+        Dog dog = new Dog("Ripley");
         String expected = "bark!";
 
         //When

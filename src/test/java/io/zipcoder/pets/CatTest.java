@@ -8,11 +8,11 @@ public class CatTest {
     @Test
     public void setCatNameTest(){
         //Given
-        Cat cat = new Cat();
-        String expected = "Coco";
+        Cat cat = new Cat("Coco");
+        String expected = "Buckets";
 
         //When
-        cat.setName("Coco");
+        cat.setName("Buckets");
         String actual = cat.getName();
 
         //Then
@@ -22,7 +22,7 @@ public class CatTest {
     @Test
     public void getCatNameTest(){
         //Given
-        Cat cat = new Cat();
+        Cat cat = new Cat("Coco");
         String expected = "Buckets";
 
         //When
@@ -36,7 +36,7 @@ public class CatTest {
     @Test
     public void catSpeakTest(){
         //Given
-        Cat cat = new Cat();
+        Cat cat = new Cat("Coco");
         String expected = "meow!";
 
         //When

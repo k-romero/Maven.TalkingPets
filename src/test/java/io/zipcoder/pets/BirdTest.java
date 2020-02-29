@@ -8,7 +8,7 @@ public class BirdTest {
     @Test
     public void setBirdNameTest(){
         //Given
-        Bird bird = new Bird();
+        Bird bird = new Bird("Tweety");
         String expected = "Pixie";
 
         //When
@@ -22,11 +22,10 @@ public class BirdTest {
     @Test
     public void getBirdNameTest(){
         //Given
-        Bird bird = new Bird();
+        Bird bird = new Bird("Trixie");
         String expected = "Trixie";
 
         //When
-        bird.setName("Trixie");
         String actual = bird.getName();
 
         //Then
@@ -36,7 +35,7 @@ public class BirdTest {
     @Test
     public void birdSpeakTest(){
         //Given
-        Bird bird = new Bird();
+        Bird bird = new Bird("Tweety");
         String expected = "peep!";
 
         //When

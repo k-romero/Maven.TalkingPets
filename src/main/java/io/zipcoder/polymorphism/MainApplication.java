@@ -1,7 +1,6 @@
 package io.zipcoder.polymorphism;
 
 import io.zipcoder.pethouse.PetHouse;
-import io.zipcoder.utilities.Console;
 import io.zipcoder.utilities.Messages;
 
 /**
@@ -9,14 +8,14 @@ import io.zipcoder.utilities.Messages;
  */
 public class MainApplication {
 
-    private static Messages messages;
-    PetHouse pethouse = new PetHouse();
-
     public static void main(String[] args) {
-
+        Messages messages = new Messages();
+        PetHouse pethouse = new PetHouse();
         messages.welcomeMessage();
-
-
+        messages.trackPetMessage();
+        pethouse.numberOfPets();
+        pethouse.placePetsInPetHouse();
+        pethouse.printPetsInPetHouse();
 
     }
 
