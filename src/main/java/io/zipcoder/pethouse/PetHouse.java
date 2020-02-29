@@ -12,9 +12,6 @@ public class PetHouse {
     Integer numOfPets;
     Pets[] petHouse;
     Pets newPet;
-    Dog dog = new Dog("temp");
-    Cat cat = new Cat("temp");
-    Bird bird = new Bird("temp");;
     Messages messages = new Messages();
     Console console = new Console(System.in,System.out);
 
@@ -65,14 +62,5 @@ public class PetHouse {
             return "cat";
         }else return "bird";
     }
-
-    private String petSpeak(Pets pet) {
-        if(pet instanceof Dog){
-            return dog.speak();
-        }else if(pet instanceof Cat){
-            return cat.speak();
-        }else return bird.speak();
-    }
-
 
 }
