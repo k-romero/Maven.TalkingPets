@@ -1,4 +1,9 @@
 package io.zipcoder.pets;
 
-public class Dog {
+public class Dog extends Pets implements petActions{
+
+
+    public String speak() {
+        return null;
+    }
 }

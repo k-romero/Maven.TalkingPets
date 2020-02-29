@@ -1,4 +1,12 @@
 package io.zipcoder.pets;
 
-public class pets {
+abstract public class Pets {
+    String name;
+
+    public String getName() {
+        return null;
+    }
+
+    public void setName(String name) {
+    }
 }
