@@ -12,12 +12,22 @@ public class PetHouse {
     Integer numOfPets;
     Pets[] petHouse;
     Pets newPet;
+    Dog dog = new Dog("temp");
+    Cat cat = new Cat("temp");
+    Bird bird = new Bird("temp");;
     Messages messages = new Messages();
     Console console = new Console(System.in,System.out);
 
 
     public void numberOfPets(){
-        this.numOfPets = messages.promptForNumberOfPets();
+        Integer result = console.getIntegerInput("How many pets do you have?");
+        if(result <= 0){
+            console.println("You must have made a mistake. Try again!");
+            numberOfPets();
+        } else if(result > 5){
+            console.println("Perhaps you should try a farm animal tracker! The limit of track-able pets here is 5");
+            numberOfPets();
+        } else this.numOfPets = result;
     }
 
     public void placePetsInPetHouse(){
@@ -42,11 +52,27 @@ public class PetHouse {
 
     public void printPetsInPetHouse(){
         for (Pets pet : petHouse) {
-            console.println(pet.getName());
+            String type = petType(pet);
+            String speak = pet.speak();
+            console.println(pet.getName() + " the " + type + " says " + speak);
         }
     }
 
+    private String petType(Pets pet) {
+        if(pet instanceof Dog){
+            return "dog";
+        }else if(pet instanceof Cat){
+            return "cat";
+        }else return "bird";
+    }
 
+    private String petSpeak(Pets pet) {
+        if(pet instanceof Dog){
+            return dog.speak();
+        }else if(pet instanceof Cat){
+            return cat.speak();
+        }else return bird.speak();
+    }
 
 
 }

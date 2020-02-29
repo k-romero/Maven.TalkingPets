@@ -1,5 +1,7 @@
 package io.zipcoder.utilities;
 
+import io.zipcoder.pethouse.PetHouse;
+
 public class Messages {
 
     Console console = new Console(System.in,System.out);
