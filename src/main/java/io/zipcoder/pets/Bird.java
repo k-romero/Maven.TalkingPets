@@ -7,6 +7,6 @@ public class Bird extends Pets implements petActions{
     }
 
     public String speak() {
-        return null;
+        return "peep!";
     }
 }

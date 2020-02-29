@@ -8,9 +8,8 @@ abstract public class Pets {
     }
 
     public String getName() {
-        return null;
+        return this.name;
     }
 
-    public void setName(String name) {
-    }
+    public void setName(String name) { this.name = name; }
 }
